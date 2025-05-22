@@ -22,21 +22,20 @@ server will start on `http://localhost:8000`
 
 ## API ENDPOINTs
 1. **Get All Movies**
-```
+```bash
 GET /movies
 ```
 Returns a list of all movies. <br/>
 2. **Get a Movie by ID**
-```
+```bash
 GET /movies/{id}
 ```
 Returns the movie with the specified ID. <br/>
 3. **Create a New Movie**
-```
+```bash
 POST /movies
 ```
-```
-Body (JSON):
+```JSON
 
 {
   "isbn": "12345",
@@ -49,11 +48,10 @@ Body (JSON):
 ```
 
 4. **Update a Movie**
-```
+```bash
 PUT /movies/{id}
 ```
-```
-Body (JSON):
+```JSON
 
 {
   "isbn": "67890",
@@ -65,7 +63,7 @@ Body (JSON):
 }
 ```
 5. **Delete a Movie**
-```
+```bash
 DELETE /movies/{id}
 ```
 Deletes the movie with the specified ID.
