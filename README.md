@@ -18,3 +18,54 @@ go get -u github.com/gorilla/mux
 go run main.go
 ```
 server will start on `http://localhost:8000`
+
+
+## API ENDPOINTs
+1. **Get All Movies**
+```
+GET /movies
+```
+Returns a list of all movies. <br/>
+2. **Get a Movie by ID**
+```
+GET /movies/{id}
+```
+Returns the movie with the specified ID. <br/>
+3. **Create a New Movie**
+```
+POST /movies
+```
+```
+Body (JSON):
+
+{
+  "isbn": "12345",
+  "title": "New Movie",
+  "director": {
+    "firstname": "John",
+    "lastname": "Doe"
+  }
+}
+```
+
+4. **Update a Movie**
+```
+PUT /movies/{id}
+```
+```
+Body (JSON):
+
+{
+  "isbn": "67890",
+  "title": "Updated Movie",
+  "director": {
+    "firstname": "Jane",
+    "lastname": "Smith"
+  }
+}
+```
+5. **Delete a Movie**
+```
+DELETE /movies/{id}
+```
+Deletes the movie with the specified ID.
